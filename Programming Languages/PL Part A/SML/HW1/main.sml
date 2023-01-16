@@ -118,10 +118,10 @@ fun oldest(dates: (int*int*int) list) =
           SOME(inner(dates))
         end;
 
-fun number_in_months_challange(dates: (int*int*int) list, months: int list) =
+fun number_in_months_challenge(dates: (int*int*int) list, months: int list) =
     number_in_months(dates, remove_duplicates(months));
     
-fun dates_in_months_challange(dates: (int*int*int) list, months: int list) =
+fun dates_in_months_challenge(dates: (int*int*int) list, months: int list) =
     dates_in_months(dates, remove_duplicates(months));
 
 fun reasonable_date(date: (int*int*int)) = 

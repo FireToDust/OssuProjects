@@ -28,6 +28,18 @@ val test10 = month_range (31, 34) = [1,2,2,2]
 
 val test11 = oldest([(2012,2,28),(2011,3,31),(2011,4,28)]) = SOME (2011,3,31)
 
-val test12a = number_in_months_challange([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,2,3,3,4]) = 3
+val test12a = number_in_months_challenge([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,2,3,3,4]) = 3
+val test12b = dates_in_months_challenge ([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,3,4,4,3]) = [(2012,2,28),(2011,3,31),(2011,4,28)]
 
-val test12b = dates_in_months_challange ([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,3,4,4,3]) = [(2012,2,28),(2011,3,31),(2011,4,28)]
+val test13a = reasonable_date((1,5,2)) = true
+val test13b = reasonable_date((0,5,2)) = false
+val test13c = reasonable_date((1,0,2)) = false
+val test13d = reasonable_date((1,5,0)) = false
+val test13e = reasonable_date((200,2,29)) = false
+val test13f = reasonable_date((5,2,29)) = false
+val test13g = reasonable_date((8,2,29)) = true
+val test13h = reasonable_date((400,2,29)) = true
+val test13i = reasonable_date((200,3,31)) = true
+val test13j = reasonable_date((200,4,31)) = false
+
+val incorrect1 = month_range (1, 100)
