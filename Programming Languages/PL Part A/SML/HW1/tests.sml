@@ -1,4 +1,4 @@
-use "main.sml";
+use "Programming Languages\\PL Part A\\SML\\HW1\\main.sml";
 
 (* Homework1 Simple Test *)
 (* These are basic test cases. Passing these tests does not guarantee that your code will pass the actual homework grader *)
@@ -27,3 +27,7 @@ val test9 = what_month 70 = 3
 val test10 = month_range (31, 34) = [1,2,2,2]
 
 val test11 = oldest([(2012,2,28),(2011,3,31),(2011,4,28)]) = SOME (2011,3,31)
+
+val test12a = number_in_months_challange([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,2,3,3,4]) = 3
+
+val test12b = dates_in_months_challange ([(2012,2,28),(2013,12,1),(2011,3,31),(2011,4,28)],[2,3,4,4,3]) = [(2012,2,28),(2011,3,31),(2011,4,28)]
