@@ -120,7 +120,16 @@ fun score(held_cards, goal) =
 
 fun officiate(deck, moves, goal) = 
     let
-        fun run(held_cards, deck, moves)
+        fun run(held_cards, deck, moves) = 
+            case moves of
+            [] => score(held_cards, goal) |
+            Discard to_discard ::tl_moves =>
+                run(remove_card(held_cards, to_discard, IllegalMove), deck, tl_moves) |
+            Draw::tl_moves => 
+                case deck of
+                [] => score(held_cards, goal) |
+                hd_deck::tl_deck => 
+                    run(hd_deck::held_cards, tl_deck, tl_moves)          
     in
-      body
+        run([], deck, moves)
     end
