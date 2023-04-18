@@ -85,7 +85,7 @@
                                  (cons (cons (fun-formal func)
                                              (call-actual e))
                                        (if (fun-nameopt func)
-                                           (cons (cons (fun-nameopt func) fun-closure)
+                                           (cons (cons (fun-nameopt func) (fun-closure))
                                                  (closure-env fun-closure))
                                            (closure-env fun-closure)))))
                (error "MUPL call applied to non-function")))]

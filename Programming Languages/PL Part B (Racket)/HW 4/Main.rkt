@@ -100,8 +100,3 @@
                                    #f)))))])
     inner-assoc))
 
-(get-at (list 1 2 3) 0)
-(define instance (cycle-lists (list 1 2 3) (list 1 2 3 4)))
-(stream-for-n-steps dan-then-dog 2)
-(stream-for-n-steps instance 10)
-
